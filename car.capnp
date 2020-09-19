@@ -155,6 +155,7 @@ struct CarState {
 
   # cruise state
   cruiseState @10 :CruiseState;
+  distanceLines @37 :DistanceLines;
 
   # gear
   gearShifter @14 :GearShifter;
@@ -208,6 +209,13 @@ struct CarState {
     brake @7;
     eco @8;
     manumatic @9;
+  }
+
+  enum DistanceLines {
+    zero @0;
+    one @1;
+    two @2;
+    three @3;
   }
 
   # send on change
